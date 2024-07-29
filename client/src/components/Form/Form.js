@@ -7,7 +7,7 @@ import useStyles from './styles';
 import { createPost, updatePost } from '../../actions/posts';
 
 const Form = ({ currentId, setCurrentId }) => {
-    const [postData, setPostData] = useState({
+    const [postData, setPostData] = useState({        // Initializes postData (an object) with empty values for its strings
         creator: '',
         title: '',
         message: '',
@@ -55,11 +55,11 @@ const Form = ({ currentId, setCurrentId }) => {
                     variant = "outlined"
                     label = "User"
                     fullWidth value = {postData.creator}
-                    onChange = {(e) => setPostData({ ...postData, creator: e.target.value })}
+                    onChange = {(e) => setPostData({ ...postData, creator: e.target.value })}     // Spreads the properties of the current postData object and then updating the creator property
                 />
-                <TextField name = "title" variant = "outlined" label = "Name of the Book" fullWidth value = {postData.title}onChange = {(e) => setPostData({ ...postData, title: e.target.value })}/>
-                <TextField name = "message" variant = "outlined" label = "Review" fullWidth value = {postData.message}onChange = {(e) => setPostData({ ...postData, message: e.target.value })}/>
-                <TextField name = "tags" variant = "outlined" label = "Tags" fullWidth value = {postData.tags}onChange = {(e) => setPostData({ ...postData, tags: e.target.value.split(/\s*,\s*/) })}/>
+                <TextField name = "title" variant = "outlined" label = "Name of the Book" fullWidth value = {postData.title} onChange = {(e) => setPostData({ ...postData, title: e.target.value })}/>
+                <TextField name = "message" variant = "outlined" label = "Review" fullWidth value = {postData.message} onChange = {(e) => setPostData({ ...postData, message: e.target.value })}/>
+                <TextField name = "tags" variant = "outlined" label = "Tags" fullWidth value = {postData.tags} onChange = {(e) => setPostData({ ...postData, tags: e.target.value.split(/\s*,\s*/) })}/>
                 <div className = {classes.fileInput}>
                     <FileBase 
                        type = "file"

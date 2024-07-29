@@ -22,7 +22,7 @@ const App = () => {
     return (
         <Container maxwidth = "lg">
             <AppBar className = {classes.appBar} position = "static" color = "inherit">
-                <Typography className = {classes.heading} variant = "h2" align = "center">The Nook</Typography>
+                <Typography className = {classes.heading} variant = "h2" align = "center">Literary Lens</Typography>
                 <img className = {classes.image} src = {memories} alt = "memories" height = "60" />
             </AppBar>
             <Grow in>

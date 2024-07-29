@@ -8,8 +8,8 @@ export default makeStyles((theme) => ({
   },
   heading: {
     textAlign: 'center',
-    fontFamily: '"Dancing Script", cursive', 
-    fontWeight: 'bold',              
+    fontFamily: '"Trebuchet MS", sans-serif',   
+    fontWeight: 'bold',         
     fontSize: '1.5rem',
   },
   paper: {
